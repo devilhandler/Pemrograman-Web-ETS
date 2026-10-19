@@ -38,3 +38,8 @@ button {
 
 .pemasukan { color: green; }
 .pengeluaran { color: red; }
+
+#daftar-transaksi li button {
+  margin-top: 6px;
+  padding: 4px 10px;
+}

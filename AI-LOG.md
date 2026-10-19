@@ -19,3 +19,12 @@ Link Claude Chat:
 - Dipakai: Hasil dari *generated AI-LOG Claude* aku *copy paste* dalam AI-LOG.md
 - Diubah: Tidak ada yang diubah.
 
+## W3–W4: Hapus transaksi dan data persisten
+- Prompt: "lanjut ke W3-W4 (hapus transaksi dengan konfirmasi dan simpan data ke localStorage)"
+- Dipakai: fungsi simpanData(), muatData(), hapusTransaksi(), dan tombol Hapus di renderDaftar() pada app.js
+- Diubah: Kunci ke localStorage-nya digantikan ke "Wallet+:transaksi"
+
+## Bug: data tidak muncul setelah refresh
+- Prompt: "ini kenapa tidak ke-save ya" (melampirkan index.html, script.js, style.css)
+- Dipakai: pemanggilan muatData() dan renderDaftar() di akhir script.js, serta fungsi hapusTransaksi()
+- Diubah: AI menemukan muatData() tidak pernah dipanggil; saya tambahkan sendiri lalu cek data di DevTools > Application > Local Storage

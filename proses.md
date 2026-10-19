@@ -10,3 +10,6 @@ Nah, salah satu cara untuk memecahkan masalah tersebut dengan membuatkan website
     munculkan peringatan jika pengeluaran hari ini melebihi jatah
 
 Jadi salah satu *design* yang aku inginkan adalah
+
+
+Tadi juga aku menemukan dua *bug* saat mengerjakan untuk Commit kedua (W3-W4), yaitu nama *script* dalam html adalah `app.js` yang seharusnya `script.js`, dan aku sendiri lupa untuk memasukkan `muatData()` dan `renderDaftar()` diujung `script.js`.
