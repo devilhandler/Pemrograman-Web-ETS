@@ -2,7 +2,7 @@
 
 Disini aku simpankan riwayat prompt dan *link chat*-nya.
 
-Link Claude Chat:
+Link Claude Chat: https://claude.ai/share/426428a7-ac9c-4ab3-a1a2-f722a1f00bd7
 
 ## W1–W2: Form tambah transaksi dan daftar transaksi
 - Prompt: "buatkan W1 dan W2 (form tambah transaksi dan daftar transaksi dinamis berformat Rupiah) dengan vanilla JS yang ringkas dan simpel"
