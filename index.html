@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wallet+: catatkan pemasukan dan pengeluaranmu!">
+  <title>Wallet+</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Wallet+</h1>
+
+  <!-- W1: Form tambah transaksi -->
+  <form id="form-transaksi">
+    <label>Tanggal
+      <input type="date" id="tanggal">
+    </label>
+
+    <label>Jenis
+      <select id="jenis">
+        <option value="pemasukan">Pemasukan</option>
+        <option value="pengeluaran">Pengeluaran</option>
+      </select>
+    </label>
+
+    <label>Kategori
+      <select id="kategori">
+        <option value="Makan">Makan</option>
+        <option value="Transport">Transport</option>
+        <option value="Belanja">Belanja</option>
+        <option value="Gaji">Gaji</option>
+        <option value="Lainnya">Lainnya</option>
+      </select>
+    </label>
+
+    <label>Nominal
+      <input type="number" id="nominal">
+    </label>
+
+    <label>Catatan (opsional)
+      <input type="text" id="catatan">
+    </label>
+
+    <button type="submit">Simpan</button>
+  </form>
+
+  <!-- W2: Daftar transaksi (diisi oleh JavaScript) -->
+  <h2>Daftar Transaksi</h2>
+  <ul id="daftar-transaksi"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>

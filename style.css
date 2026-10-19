@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+input, select, button {
+  padding: 8px;
+  font-size: 14px;
+}
+
+button {
+  cursor: pointer;
+}
+
+#daftar-transaksi {
+  list-style: none;
+  padding: 0;
+}
+
+#daftar-transaksi li {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+.pemasukan { color: green; }
+.pengeluaran { color: red; }
