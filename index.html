@@ -10,6 +10,20 @@
 <body>
   <h1>Wallet+</h1>
 
+  <!-- FITUR KHAS: Jatah harian mahasiswa kos -->
+  <section id="jatah-box">
+    <h2>Jatah Harian</h2>
+    <form id="form-uang-bulanan">
+      <input type="number" id="uang-bulanan" placeholder="Uang bulanan dari orang tua">
+      <button type="submit">Tambah Uang Bulanan</button>
+    </form>
+    <p>Sisa uang bulan ini: <strong id="sisa-uang">Rp 0</strong></p>
+    <p>Sisa hari: <strong id="sisa-hari">0</strong> hari</p>
+    <p>Jatah hari ini: <strong id="jatah-harian">Rp 0</strong></p>
+    <p>Pengeluaran hari ini: <strong id="pengeluaran-hari-ini">Rp 0</strong></p>
+    <p id="peringatan"></p>
+  </section>
+
   <!-- W5: Ringkasan -->
   <div id="ringkasan">
     <div>Pemasukan<br><strong id="total-pemasukan">Rp 0</strong></div>
@@ -36,6 +50,7 @@
         <option value="Transport">Transport</option>
         <option value="Belanja">Belanja</option>
         <option value="Gaji">Gaji</option>
+        <option value="Uang Bulanan">Uang Bulanan</option>
         <option value="Lainnya">Lainnya</option>
       </select>
     </label>
@@ -51,12 +66,40 @@
     <!-- W6: tempat pesan error -->
     <p id="pesan-error"></p>
 
-    <button type="submit">Simpan</button>
+    <button type="submit" id="tombol-simpan">Simpan</button>
+    <!-- BONUS Edit: tombol batal hanya muncul saat mode edit -->
+    <button type="button" id="tombol-batal" hidden>Batal Edit</button>
   </form>
 
-  <!-- W2: Daftar transaksi (diisi oleh JavaScript) -->
+  <!-- BONUS: Filter dan pencarian -->
   <h2>Daftar Transaksi</h2>
+  <div id="filter">
+    <select id="filter-jenis">
+      <option value="">Semua jenis</option>
+      <option value="pemasukan">Pemasukan</option>
+      <option value="pengeluaran">Pengeluaran</option>
+    </select>
+    <select id="filter-kategori">
+      <option value="">Semua kategori</option>
+      <option value="Makan">Makan</option>
+      <option value="Transport">Transport</option>
+      <option value="Belanja">Belanja</option>
+      <option value="Uang Bulanan">Uang Bulanan</option>
+      <option value="Lainnya">Lainnya</option>
+    </select>
+    <input type="text" id="filter-cari" placeholder="Cari catatan...">
+  </div>
+
+  <!-- W2: Daftar transaksi (diisi oleh JavaScript) -->
   <ul id="daftar-transaksi"></ul>
+
+  <!-- BONUS: Ekspor / impor JSON -->
+  <div id="backup">
+    <button type="button" id="tombol-ekspor">Ekspor JSON</button>
+    <label>Impor JSON
+      <input type="file" id="input-impor" accept=".json">
+    </label>
+  </div>
 
   <script src="script.js"></script>
 </body>

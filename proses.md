@@ -9,7 +9,9 @@ Nah, salah satu cara untuk memecahkan masalah tersebut dengan membuatkan website
     tampilkan jatah harian = sisa uang ÷ sisa hari di bulan berjalan;
     munculkan peringatan jika pengeluaran hari ini melebihi jatah
 
-Jadi salah satu *design* yang aku inginkan adalah
+Jadi salah satu *design* yang aku inginkan adalah aksen warna hijau untuk website Wallet+ ini, karena aksen hijau merupakan dari warna uang mata juga, jadi mengikut warna uang mata.
 
 
 Tadi juga aku menemukan dua *bug* saat mengerjakan untuk Commit kedua (W3-W4), yaitu nama *script* dalam html adalah `app.js` yang seharusnya `script.js`, dan aku sendiri lupa untuk memasukkan `muatData()` dan `renderDaftar()` diujung `script.js`.
+
+Dan ada *bug* ketiga yang aku ketemu, yaitu datanya duplikat dan ada fungsi yang dijalankan dua kali secara tidak sengaja, yaitu `transaksi.push(dataBaru)` di baris 84 (sebelumnya) dalam `script.js`. Itu di-fix dengan bantuan Claude.

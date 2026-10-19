@@ -32,4 +32,14 @@ Link Claude Chat:
 ## W5–W6: Ringkasan dan validasi form
 - Prompt: "lanjut ke W5 dan W6" (melanjutkan script.js milik saya)
 - Dipakai: fungsi hitungRingkasan() dan validasiForm() di script.js, elemen #ringkasan dan #pesan-error di index.html, serta style-nya di style.css
-- Diubah: Tidak ada perubahan.
+- Diubah: Ganti `KUNCI` dalam `script.js` ke `"Walletplus:transaksi"`
+
+## Fitur khas jatah harian + bonus Edit, Filter, Ekspor/Impor JSON
+- Prompt: "apakah fitur jatah harian sudah diimplementasi? kerjakan juga fitur tambahan Edit, Filter, Ekspor data ke JSON"
+- Dipakai: hitungJatahHarian(), tambahUangBulanan(), tanggalHariIni(), mulaiEdit(), keluarModeEdit(), ambilDataTerfilter(), eksporData(), imporData() di script.js beserta elemen HTML dan CSS-nya
+- Diubah: Hapus baris 93 di `index.html` karena sudah di lakukan di baris 74 (atau Fitur Bonus: Filter & Pencarian)
+
+## Bug: transaksi duplikat saat submit/hapus
+- Prompt: "ada bug dalam penyimpanan, kenapa saat submit dan hapus itu duplikat?" (melampirkan index.html, script.js, style.css)
+- Dipakai: tidak ada kode baru; AI menunjukkan baris transaksi.push() ganda, id tombol-simpan yang hilang, dan kategori form/filter yang tidak sama
+- Diubah: saya hapus push ganda, tambah id="tombol-simpan", dan menyamakan opsi kategori di form dan filter

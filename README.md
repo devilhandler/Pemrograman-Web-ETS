@@ -1,4 +1,4 @@
-# DompetKu: Website Money Tracker
+# Wallet+: Website Money Tracker
 
 - Nama: Hilmi Fauzi Adha Simamora
 - NRP: 505325103

@@ -62,4 +62,40 @@ button {
   color: red;
   margin: 0;
 }
+
+/* FITUR KHAS: jatah harian */
+#jatah-box {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 16px;
+}
+ 
+#jatah-box h2 { margin-top: 0; }
+#jatah-box p { margin: 4px 0; }
+ 
+#form-uang-bulanan {
+  flex-direction: row;
+  margin-bottom: 8px;
+}
+ 
+#form-uang-bulanan input { flex: 1; }
+ 
+#peringatan {
+  color: red;
+  font-weight: bold;
+}
+ 
+/* BONUS: filter dan backup */
+#filter, #backup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+ 
+#filter-cari { flex: 1; }
+ 
+#daftar-transaksi li button {
+  margin-right: 6px;
+}
  
