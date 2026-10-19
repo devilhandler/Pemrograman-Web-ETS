@@ -311,5 +311,21 @@ document.getElementById("filter-cari").addEventListener("input", renderDaftar);
 document.getElementById("tombol-ekspor").addEventListener("click", eksporData);
 document.getElementById("input-impor").addEventListener("change", imporData);
 
+// TEMA: ganti light/dark mode, pilihan disimpan di localStorage
+const tombolTema = document.getElementById("tombol-tema");
+ 
+function terapkanTema(tema) {
+    document.body.classList.toggle("dark", tema === "dark");
+    tombolTema.textContent = tema === "dark" ? "☀️ Light" : "🌙 Dark";
+}
+ 
+tombolTema.addEventListener("click", function () {
+    const temaBaru = document.body.classList.contains("dark") ? "light" : "dark";
+    localStorage.setItem("Walletplus:tema", temaBaru);
+    terapkanTema(temaBaru);
+});
+ 
+terapkanTema(localStorage.getItem("Walletplus:tema") || "light");
+
 muatData();
 renderDaftar();

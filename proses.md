@@ -9,8 +9,16 @@ Nah, salah satu cara untuk memecahkan masalah tersebut dengan membuatkan website
     tampilkan jatah harian = sisa uang ÷ sisa hari di bulan berjalan;
     munculkan peringatan jika pengeluaran hari ini melebihi jatah
 
-Jadi salah satu *design* yang aku inginkan adalah aksen warna hijau untuk website Wallet+ ini, karena aksen hijau merupakan dari warna uang mata juga, jadi mengikut warna uang mata.
+Dan struktur datanya adalah:
+    id: Menggunakan waktu saat menyimpan atau edit.
+    tanggal: Tanggal yang dipilihkan
+    jenis: Jenis nominal yang dimasukkan apa
+    kategori: Kategorinya apa
+    nominal: Total uangnya yang ingin diinput berapa
 
+    catatan: Jika mau ada catatan, opsional ini.
+
+Jadi salah satu *design* yang aku inginkan adalah aksen warna hijau untuk website Wallet+ ini, karena aksen hijau merupakan dari warna uang mata juga, jadi mengikut warna uang mata.
 
 Tadi juga aku menemukan dua *bug* saat mengerjakan untuk Commit kedua (W3-W4), yaitu nama *script* dalam html adalah `app.js` yang seharusnya `script.js`, dan aku sendiri lupa untuk memasukkan `muatData()` dan `renderDaftar()` diujung `script.js`.
 

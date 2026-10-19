@@ -1,10 +1,63 @@
+/* ===== Warna (light mode) ===== */
+:root {
+  --bg: #f6f8f7;
+  --card: #ffffff;
+  --text: #1a1f1c;
+  --muted: #6b7570;
+  --border: #dde3e0;
+  --accent: #16a34a;        /* hijau utama */
+  --accent-hover: #15803d;
+  --merah: #dc2626;
+  --judul-dari: #000000;    /* gradien judul */
+  --judul-ke: #8a8a8a;
+}
+
+/* ===== Warna (dark mode) ===== */
+body.dark {
+  --bg: #0f1311;
+  --card: #181d1a;
+  --text: #e8ece9;
+  --muted: #9aa49f;
+  --border: #2a322e;
+  --accent: #22c55e;
+  --accent-hover: #4ade80;
+  --merah: #f87171;
+  --judul-dari: #ffffff;
+  --judul-ke: #7a7a7a;
+  color-scheme: dark;       /* ikon kalender ikut gelap */
+}
+
+/* ===== Dasar ===== */
 body {
   font-family: Arial, sans-serif;
   max-width: 600px;
   margin: 20px auto;
   padding: 0 16px;
+  background: var(--bg);
+  color: var(--text);
 }
 
+/* Judul dengan gradien hitam-putih */
+h1 {
+  font-size: 40px;
+  margin: 0;
+  background: linear-gradient(90deg, var(--judul-dari), var(--judul-ke));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h2 { font-size: 18px; }
+
+/* Header: judul + tombol tema */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* ===== Form & input ===== */
 form {
   display: flex;
   flex-direction: column;
@@ -14,77 +67,97 @@ form {
 label {
   display: flex;
   flex-direction: column;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 14px;
 }
 
 input, select, button {
   padding: 8px;
   font-size: 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--card);
+  color: var(--text);
+}
+
+input:focus, select:focus {
+  outline: 2px solid var(--accent);
 }
 
 button {
   cursor: pointer;
 }
 
-#daftar-transaksi {
-  list-style: none;
-  padding: 0;
+/* Tombol utama berwarna hijau */
+button[type="submit"], #tombol-ekspor {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #ffffff;
+  font-weight: bold;
 }
 
-#daftar-transaksi li {
-  border: 1px solid #ccc;
-  padding: 10px;
+button[type="submit"]:hover, #tombol-ekspor:hover {
+  background: var(--accent-hover);
+}
+
+/* ===== Kartu (kotak-kotak) ===== */
+#jatah-box, #ringkasan div, #daftar-transaksi li {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+/* FITUR KHAS: jatah harian */
+#jatah-box {
+  padding: 12px;
+  margin-bottom: 16px;
+  border-left: 4px solid var(--accent);
+}
+
+#jatah-box h2 { margin-top: 0; }
+#jatah-box p { margin: 4px 0; }
+
+#form-uang-bulanan {
+  flex-direction: row;
   margin-bottom: 8px;
 }
 
-.pemasukan { color: green; }
-.pengeluaran { color: red; }
+#form-uang-bulanan input { flex: 1; }
 
-#daftar-transaksi li button {
-  margin-top: 6px;
-  padding: 4px 10px;
+#peringatan {
+  color: var(--merah);
+  font-weight: bold;
 }
+
 /* W5: ringkasan */
 #ringkasan {
   display: flex;
   gap: 8px;
   margin-bottom: 16px;
 }
- 
+
 #ringkasan div {
   flex: 1;
-  border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
+  color: var(--muted);
+  font-size: 14px;
 }
- 
+
+#ringkasan strong {
+  color: var(--text);
+  font-size: 16px;
+}
+
+#saldo { color: var(--accent) !important; }
+
 /* W6: pesan error */
 #pesan-error {
-  color: red;
+  color: var(--merah);
   margin: 0;
 }
 
-/* FITUR KHAS: jatah harian */
-#jatah-box {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-bottom: 16px;
-}
- 
-#jatah-box h2 { margin-top: 0; }
-#jatah-box p { margin: 4px 0; }
- 
-#form-uang-bulanan {
-  flex-direction: row;
-  margin-bottom: 8px;
-}
- 
-#form-uang-bulanan input { flex: 1; }
- 
-#peringatan {
-  color: red;
-  font-weight: bold;
-}
- 
 /* BONUS: filter dan backup */
 #filter, #backup {
   display: flex;
@@ -92,10 +165,38 @@ button {
   gap: 8px;
   margin-bottom: 12px;
 }
- 
+
+#backup { align-items: flex-end; }
+
 #filter-cari { flex: 1; }
- 
-#daftar-transaksi li button {
-  margin-right: 6px;
+
+/* W2: daftar transaksi */
+#daftar-transaksi {
+  list-style: none;
+  padding: 0;
 }
- 
+
+#daftar-transaksi li {
+  padding: 10px;
+  margin-bottom: 8px;
+}
+
+#daftar-transaksi li small {
+  display: block;
+  color: var(--muted);
+}
+
+#daftar-transaksi li button {
+  margin-top: 6px;
+  margin-right: 6px;
+  padding: 4px 10px;
+}
+
+.pemasukan { color: var(--accent); }
+.pengeluaran { color: var(--merah); }
+
+/* BONUS responsif: layar HP kecil (360px) */
+@media (max-width: 480px) {
+  #ringkasan { flex-direction: column; }
+  #form-uang-bulanan { flex-direction: column; }
+}

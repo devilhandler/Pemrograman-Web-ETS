@@ -43,3 +43,8 @@ Link Claude Chat:
 - Prompt: "ada bug dalam penyimpanan, kenapa saat submit dan hapus itu duplikat?" (melampirkan index.html, script.js, style.css)
 - Dipakai: tidak ada kode baru; AI menunjukkan baris transaksi.push() ganda, id tombol-simpan yang hilang, dan kategori form/filter yang tidak sama
 - Diubah: saya hapus push ganda, tambah id="tombol-simpan", dan menyamakan opsi kategori di form dan filter
+
+## Tampilan: aksen hijau, light/dark mode, judul gradien
+- Prompt: "buatkan dengan aksen hijau, bisa light mode dan dark mode, simpel, judul Wallet+ diberi gradien hitam & putih"
+- Dipakai: seluruh style.css (variabel warna, body.dark, gradien h1, media query 480px), tombol #tombol-tema di index.html, fungsi terapkanTema() di script.js
+- Diubah: Tidak ada perubahan.
