@@ -10,6 +10,13 @@
 <body>
   <h1>Wallet+</h1>
 
+  <!-- W5: Ringkasan -->
+  <div id="ringkasan">
+    <div>Pemasukan<br><strong id="total-pemasukan">Rp 0</strong></div>
+    <div>Pengeluaran<br><strong id="total-pengeluaran">Rp 0</strong></div>
+    <div>Saldo<br><strong id="saldo">Rp 0</strong></div>
+  </div>
+
   <!-- W1: Form tambah transaksi -->
   <form id="form-transaksi">
     <label>Tanggal
@@ -40,6 +47,9 @@
     <label>Catatan (opsional)
       <input type="text" id="catatan">
     </label>
+
+    <!-- W6: tempat pesan error -->
+    <p id="pesan-error"></p>
 
     <button type="submit">Simpan</button>
   </form>

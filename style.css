@@ -43,3 +43,23 @@ button {
   margin-top: 6px;
   padding: 4px 10px;
 }
+/* W5: ringkasan */
+#ringkasan {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+ 
+#ringkasan div {
+  flex: 1;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+ 
+/* W6: pesan error */
+#pesan-error {
+  color: red;
+  margin: 0;
+}
+ 

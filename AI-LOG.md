@@ -28,3 +28,8 @@ Link Claude Chat:
 - Prompt: "ini kenapa tidak ke-save ya" (melampirkan index.html, script.js, style.css)
 - Dipakai: pemanggilan muatData() dan renderDaftar() di akhir script.js, serta fungsi hapusTransaksi()
 - Diubah: AI menemukan muatData() tidak pernah dipanggil; saya tambahkan sendiri lalu cek data di DevTools > Application > Local Storage
+
+## W5–W6: Ringkasan dan validasi form
+- Prompt: "lanjut ke W5 dan W6" (melanjutkan script.js milik saya)
+- Dipakai: fungsi hitungRingkasan() dan validasiForm() di script.js, elemen #ringkasan dan #pesan-error di index.html, serta style-nya di style.css
+- Diubah: Tidak ada perubahan.
